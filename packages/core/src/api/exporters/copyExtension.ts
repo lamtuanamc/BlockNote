@@ -1,14 +1,12 @@
 import { Extension } from "@tiptap/core";
 import { Node } from "prosemirror-model";
 import { NodeSelection, Plugin } from "prosemirror-state";
-
 import { EditorView } from "prosemirror-view";
 import type { BlockNoteEditor } from "../../editor/BlockNoteEditor";
 import { BlockSchema, InlineContentSchema, StyleSchema } from "../../schema";
 import { initializeESMDependencies } from "../../util/esmDependencies";
 import { createExternalHTMLExporter } from "./html/externalHTMLExporter";
 import { createInternalHTMLSerializer } from "./html/internalHTMLSerializer";
-import { cleanHTMLToMarkdown } from "./markdown/markdownExporter";
 
 async function selectedFragmentToHTML<
   BSchema extends BlockSchema,
@@ -43,9 +41,20 @@ async function selectedFragmentToHTML<
     {}
   );
 
-  const plainText = await cleanHTMLToMarkdown(externalHTML);
+  // const plainText = await cleanHTMLToMarkdown(externalHTML);
+  const plainText = await getSelectedPlainText(view);
 
   return { internalHTML, externalHTML, plainText };
+}
+
+function getSelectedPlainText(view: EditorView): string {
+  const { state } = view;
+  const { from, to } = state.selection;
+
+  // Get plain text from selection
+  const plainText = state.doc.textBetween(from, to, "\n\n");
+
+  return plainText;
 }
 
 const copyToClipboard = <
@@ -77,9 +86,11 @@ const copyToClipboard = <
   }
 
   (async () => {
-    const { internalHTML, externalHTML, plainText } =
-      await selectedFragmentToHTML(view, editor);
-
+    const { internalHTML, externalHTML } = await selectedFragmentToHTML(
+      view,
+      editor
+    );
+    const plainText = getSelectedPlainText(view);
     // TODO: Writing to other MIME types not working in Safari for
     //  some reason.
     event.clipboardData!.setData("blocknote/html", internalHTML);
@@ -113,9 +124,6 @@ export const createCopyToClipboardExtension = <
                 // Prevent default PM handler to be called
                 return true;
               },
-              // This is for the use-case in which only a block without content
-              // is selected, e.g. an image block, and dragged (not using the
-              // drag handle).
               dragstart(view, event) {
                 // Checks if a `NodeSelection` is active.
                 if (!("node" in view.state.selection)) {
@@ -144,8 +152,9 @@ export const createCopyToClipboardExtension = <
                 event.dataTransfer!.clearData();
 
                 (async () => {
-                  const { internalHTML, externalHTML, plainText } =
+                  const { internalHTML, externalHTML } =
                     await selectedFragmentToHTML(view, editor);
+                  const plainText = getSelectedPlainText(view);
 
                   // TODO: Writing to other MIME types not working in Safari for
                   //  some reason.
