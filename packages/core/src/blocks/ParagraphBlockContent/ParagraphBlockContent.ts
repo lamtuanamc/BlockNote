@@ -20,10 +20,7 @@ export const ParagraphBlockContent = createStronglyTypedTiptapNode({
     return {
       "Mod-Alt-0": () => {
         const blockInfo = getBlockInfoFromSelection(this.editor.state);
-        if (
-          blockInfo.blockContent.node.type.spec.content !== "inline*" ||
-          blockInfo.blockContent.node.type.name !== "paragraph"
-        ) {
+        if (blockInfo.blockContent.node.type.spec.content !== "inline*") {
           return true;
         }
 
