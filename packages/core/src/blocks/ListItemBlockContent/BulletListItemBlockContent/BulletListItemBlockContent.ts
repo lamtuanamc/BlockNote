@@ -29,8 +29,8 @@ const BulletListItemBlockContent = createStronglyTypedTiptapNode({
         handler: ({ state, chain, range }) => {
           const blockInfo = getBlockInfoFromSelection(state);
           if (
-            blockInfo.blockContent.node.type.spec.content !== "inline*" ||
-            blockInfo.blockContent.node.type.name !== "paragraph"
+            !blockInfo.isBlockContainer ||
+            blockInfo.blockContent.node.type.spec.content !== "inline*"
           ) {
             return;
           }
@@ -39,7 +39,7 @@ const BulletListItemBlockContent = createStronglyTypedTiptapNode({
             .command(
               updateBlockCommand(
                 this.options.editor,
-                blockInfo.blockContainer.beforePos,
+                blockInfo.bnBlock.beforePos,
                 {
                   type: "bulletListItem",
                   props: {},
@@ -59,21 +59,17 @@ const BulletListItemBlockContent = createStronglyTypedTiptapNode({
       "Mod-Shift-8": () => {
         const blockInfo = getBlockInfoFromSelection(this.editor.state);
         if (
-          blockInfo.blockContent.node.type.spec.content !== "inline*" ||
-          blockInfo.blockContent.node.type.name !== "paragraph"
+          !blockInfo.isBlockContainer ||
+          blockInfo.blockContent.node.type.spec.content !== "inline*"
         ) {
           return true;
         }
 
-        return this.options.editor.commands.command(
-          updateBlockCommand(
-            this.options.editor,
-            blockInfo.blockContainer.beforePos,
-            {
-              type: "bulletListItem",
-              props: {},
-            }
-          )
+        return this.editor.commands.command(
+          updateBlockCommand(this.options.editor, blockInfo.bnBlock.beforePos, {
+            type: "bulletListItem",
+            props: {},
+          })
         );
       },
     };

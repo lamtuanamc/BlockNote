@@ -49,9 +49,8 @@ const HeadingBlockContent = createStronglyTypedTiptapNode({
           handler: ({ state, chain, range }) => {
             const blockInfo = getBlockInfoFromSelection(state);
             if (
-              blockInfo.blockContent.node.type.spec.content !== "inline*" ||
-              (blockInfo.blockContent.node.type.name !== "paragraph" &&
-                blockInfo.blockContent.node.type.name !== "heading")
+              !blockInfo.isBlockContainer ||
+              blockInfo.blockContent.node.type.spec.content !== "inline*"
             ) {
               return;
             }
@@ -60,7 +59,7 @@ const HeadingBlockContent = createStronglyTypedTiptapNode({
               .command(
                 updateBlockCommand(
                   this.options.editor,
-                  blockInfo.blockContainer.beforePos,
+                  blockInfo.bnBlock.beforePos,
                   {
                     type: "heading",
                     props: {
@@ -83,71 +82,56 @@ const HeadingBlockContent = createStronglyTypedTiptapNode({
       "Mod-Alt-1": () => {
         const blockInfo = getBlockInfoFromSelection(this.editor.state);
         if (
-          blockInfo.blockContent.node.type.spec.content !== "inline*" ||
-          (blockInfo.blockContent.node.type.name !== "paragraph" &&
-            blockInfo.blockContent.node.type.name !== "heading")
+          !blockInfo.isBlockContainer ||
+          blockInfo.blockContent.node.type.spec.content !== "inline*"
         ) {
           return true;
         }
 
         // call updateBlockCommand
         return this.editor.commands.command(
-          updateBlockCommand(
-            this.options.editor,
-            blockInfo.blockContainer.beforePos,
-            {
-              type: "heading",
-              props: {
-                level: 1 as any,
-              },
-            }
-          )
+          updateBlockCommand(this.options.editor, blockInfo.bnBlock.beforePos, {
+            type: "heading",
+            props: {
+              level: 1 as any,
+            },
+          })
         );
       },
       "Mod-Alt-2": () => {
         const blockInfo = getBlockInfoFromSelection(this.editor.state);
         if (
-          blockInfo.blockContent.node.type.spec.content !== "inline*" ||
-          (blockInfo.blockContent.node.type.name !== "paragraph" &&
-            blockInfo.blockContent.node.type.name !== "heading")
+          !blockInfo.isBlockContainer ||
+          blockInfo.blockContent.node.type.spec.content !== "inline*"
         ) {
           return true;
         }
 
         return this.editor.commands.command(
-          updateBlockCommand(
-            this.options.editor,
-            blockInfo.blockContainer.beforePos,
-            {
-              type: "heading",
-              props: {
-                level: 2 as any,
-              },
-            }
-          )
+          updateBlockCommand(this.options.editor, blockInfo.bnBlock.beforePos, {
+            type: "heading",
+            props: {
+              level: 2 as any,
+            },
+          })
         );
       },
       "Mod-Alt-3": () => {
         const blockInfo = getBlockInfoFromSelection(this.editor.state);
         if (
-          blockInfo.blockContent.node.type.spec.content !== "inline*" ||
-          (blockInfo.blockContent.node.type.name !== "paragraph" &&
-            blockInfo.blockContent.node.type.name !== "heading")
+          !blockInfo.isBlockContainer ||
+          blockInfo.blockContent.node.type.spec.content !== "inline*"
         ) {
           return true;
         }
 
         return this.editor.commands.command(
-          updateBlockCommand(
-            this.options.editor,
-            blockInfo.blockContainer.beforePos,
-            {
-              type: "heading",
-              props: {
-                level: 3 as any,
-              },
-            }
-          )
+          updateBlockCommand(this.options.editor, blockInfo.bnBlock.beforePos, {
+            type: "heading",
+            props: {
+              level: 3 as any,
+            },
+          })
         );
       },
     };
