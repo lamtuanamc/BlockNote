@@ -5,7 +5,7 @@ import {
   InlineContentSchema,
   StyleSchema,
   UiElementPosition,
-} from "@blocknote/core";
+} from "blocknote-core-ts";
 
 export type FilePanelProps<
   I extends InlineContentSchema = DefaultInlineContentSchema,

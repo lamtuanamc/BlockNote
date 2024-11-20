@@ -117,6 +117,28 @@ export function getDefaultSlashMenuItems<
         badge: formatKeyboardShortcut("Mod-Alt-3"),
         key: "heading_3",
         ...editor.dictionary.slash_menu.heading_3,
+      },
+      {
+        onItemClick: () => {
+          insertOrUpdateBlock(editor, {
+            type: "heading",
+            props: { level: 4 },
+          });
+        },
+        badge: formatKeyboardShortcut("Mod-Alt-4"),
+        key: "heading_4",
+        ...editor.dictionary.slash_menu.heading_4,
+      },
+      {
+        onItemClick: () => {
+          insertOrUpdateBlock(editor, {
+            type: "heading",
+            props: { level: 5 },
+          });
+        },
+        badge: formatKeyboardShortcut("Mod-Alt-5"),
+        key: "heading_5",
+        ...editor.dictionary.slash_menu.heading_5,
       }
     );
   }

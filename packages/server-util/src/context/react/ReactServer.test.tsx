@@ -2,8 +2,8 @@ import {
   BlockNoteSchema,
   defaultBlockSpecs,
   defaultProps,
-} from "@blocknote/core";
-import { createReactBlockSpec } from "@blocknote/react";
+} from "blocknote-core-ts";
+import { createReactBlockSpec } from "blocknote-react-ts";
 import { createContext, useContext } from "react";
 import { describe, expect, it } from "vitest";
 import { ServerBlockNoteEditor } from "../ServerBlockNoteEditor.js";

@@ -1,4 +1,4 @@
-import { BlockNoteSchema, defaultBlockSpecs } from "@blocknote/core";
+import { BlockNoteSchema, defaultBlockSpecs } from "blocknote-core-ts";
 
 // Simplified schema without media, file, and table blocks.
 export const schema = BlockNoteSchema.create({

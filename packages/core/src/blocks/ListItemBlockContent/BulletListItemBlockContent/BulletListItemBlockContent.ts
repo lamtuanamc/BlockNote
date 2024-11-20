@@ -30,7 +30,8 @@ const BulletListItemBlockContent = createStronglyTypedTiptapNode({
           const blockInfo = getBlockInfoFromSelection(state);
           if (
             !blockInfo.isBlockContainer ||
-            blockInfo.blockContent.node.type.spec.content !== "inline*"
+            blockInfo.blockContent.node.type.spec.content !== "inline*" ||
+            blockInfo.blockContent.node.type.name !== "paragraph"
           ) {
             return;
           }
@@ -60,7 +61,8 @@ const BulletListItemBlockContent = createStronglyTypedTiptapNode({
         const blockInfo = getBlockInfoFromSelection(this.editor.state);
         if (
           !blockInfo.isBlockContainer ||
-          blockInfo.blockContent.node.type.spec.content !== "inline*"
+          blockInfo.blockContent.node.type.spec.content !== "inline*" ||
+          blockInfo.blockContent.node.type.name !== "paragraph"
         ) {
           return true;
         }

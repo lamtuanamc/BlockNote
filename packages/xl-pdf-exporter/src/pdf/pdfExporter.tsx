@@ -9,7 +9,7 @@ import {
   InlineContentSchema,
   StyleSchema,
   StyledText,
-} from "@blocknote/core";
+} from "blocknote-core-ts";
 import {
   Document,
   Font,

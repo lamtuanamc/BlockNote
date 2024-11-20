@@ -4,7 +4,7 @@ import {
   InlineContentSchema,
   mergeCSSClasses,
   StyleSchema,
-} from "@blocknote/core";
+} from "blocknote-core-ts";
 import { ReactNode, useState } from "react";
 
 import { createPortal } from "react-dom";

@@ -3,7 +3,7 @@ import {
   formatKeyboardShortcut,
   InlineContentSchema,
   StyleSchema,
-} from "@blocknote/core";
+} from "blocknote-core-ts";
 import { useCallback, useMemo, useState } from "react";
 import { RiIndentDecrease, RiIndentIncrease } from "react-icons/ri";
 

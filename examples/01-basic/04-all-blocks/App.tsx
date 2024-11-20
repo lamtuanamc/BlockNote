@@ -3,15 +3,15 @@ import {
   combineByGroup,
   filterSuggestionItems,
   locales,
-} from "@blocknote/core";
-import "@blocknote/core/fonts/inter.css";
-import { BlockNoteView } from "@blocknote/mantine";
-import "@blocknote/mantine/style.css";
+} from "blocknote-core-ts";
+import "blocknote-core-tsts/fonts/inter.css";
+import { BlockNoteView } from "blocknote-mantine-ts";
+import "blocknote-mantine-ts/style.css";
 import {
   SuggestionMenuController,
   getDefaultReactSlashMenuItems,
   useCreateBlockNote,
-} from "@blocknote/react";
+} from "blocknote-react-ts";
 import {
   getMultiColumnSlashMenuItems,
   multiColumnDropCursor,

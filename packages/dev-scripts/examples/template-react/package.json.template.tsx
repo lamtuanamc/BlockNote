@@ -13,10 +13,10 @@ const template = (project: Project) => ({
     lint: "eslint . --max-warnings 0",
   },
   dependencies: {
-    "@blocknote/core": "latest",
-    "@blocknote/react": "latest",
+    "blocknote-core-ts": "latest",
+    "blocknote-react-ts": "latest",
     "@blocknote/ariakit": "latest",
-    "@blocknote/mantine": "latest",
+    "blocknote-mantine-ts": "latest",
     "@blocknote/shadcn": "latest",
     react: "^18.3.1",
     "react-dom": "^18.3.1",

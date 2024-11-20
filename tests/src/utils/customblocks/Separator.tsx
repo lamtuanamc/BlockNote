@@ -1,4 +1,4 @@
-import { BlockNoteEditor, createBlockSpec } from "@blocknote/core";
+import { BlockNoteEditor, createBlockSpec } from "blocknote-core-ts";
 
 import { RiSeparator } from "react-icons/ri";
 

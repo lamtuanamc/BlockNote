@@ -20,6 +20,18 @@ export const is: Dictionary = {
       aliases: ["h3", "fyrirsogn3", "undirfyrirsogn"],
       group: "Fyrirsagnir",
     },
+    heading_4: {
+      title: "Heading 4",
+      subtext: "Subsection and group heading",
+      aliases: ["h4", "heading4", "subheading"],
+      group: "Headings",
+    },
+    heading_5: {
+      title: "Heading 5",
+      subtext: "Subsection and group heading",
+      aliases: ["h5", "heading5", "subheading"],
+      group: "Headings",
+    },
     numbered_list: {
       title: "Númeruð listi",
       subtext: "Notað til að birta númeraðan lista",

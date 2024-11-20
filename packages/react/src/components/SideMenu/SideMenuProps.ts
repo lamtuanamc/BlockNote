@@ -8,7 +8,7 @@ import {
   SideMenuState,
   StyleSchema,
   UiElementPosition,
-} from "@blocknote/core";
+} from "blocknote-core-ts";
 import { FC } from "react";
 
 import { DragHandleMenuProps } from "./DragHandleMenu/DragHandleMenuProps.js";

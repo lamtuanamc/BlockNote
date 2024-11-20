@@ -1,8 +1,8 @@
-import { BlockNoteSchema, defaultBlockSpecs } from "@blocknote/core";
-import "@blocknote/core/fonts/inter.css";
-import { BlockNoteView } from "@blocknote/mantine";
-import "@blocknote/mantine/style.css";
-import { useCreateBlockNote } from "@blocknote/react";
+import { BlockNoteSchema, defaultBlockSpecs } from "blocknote-core-ts";
+import "blocknote-core-tsts/fonts/inter.css";
+import { BlockNoteView } from "blocknote-mantine-ts";
+import "blocknote-mantine-ts/style.css";
+import { useCreateBlockNote } from "blocknote-react-ts";
 
 export default function App() {
   // Disable the Audio and Image blocks from the built-in schema

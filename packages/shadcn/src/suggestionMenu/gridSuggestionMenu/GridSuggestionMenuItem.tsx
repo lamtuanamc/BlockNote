@@ -1,5 +1,5 @@
-import { assertEmpty } from "@blocknote/core";
-import { ComponentProps, elementOverflow, mergeRefs } from "@blocknote/react";
+import { assertEmpty } from "blocknote-core-ts";
+import { ComponentProps, elementOverflow, mergeRefs } from "blocknote-react-ts";
 import { forwardRef, useEffect, useRef } from "react";
 
 export const GridSuggestionMenuItem = forwardRef<

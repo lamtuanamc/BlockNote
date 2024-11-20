@@ -4,8 +4,8 @@ import {
   Menu as MantineMenu,
 } from "@mantine/core";
 
-import { assertEmpty, isSafari } from "@blocknote/core";
-import { ComponentProps } from "@blocknote/react";
+import { assertEmpty, isSafari } from "blocknote-core-ts";
+import { ComponentProps } from "blocknote-react-ts";
 import { forwardRef } from "react";
 import { HiChevronDown } from "react-icons/hi";
 

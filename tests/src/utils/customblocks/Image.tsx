@@ -2,7 +2,7 @@ import {
   BlockNoteEditor,
   createBlockSpec,
   defaultProps,
-} from "@blocknote/core";
+} from "blocknote-core-ts";
 import { RiImage2Fill } from "react-icons/ri";
 export const Image = createBlockSpec(
   {

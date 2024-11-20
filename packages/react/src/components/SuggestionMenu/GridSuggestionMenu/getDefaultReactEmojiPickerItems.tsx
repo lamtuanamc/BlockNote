@@ -4,7 +4,7 @@ import {
   getDefaultEmojiPickerItems,
   InlineContentSchema,
   StyleSchema,
-} from "@blocknote/core";
+} from "blocknote-core-ts";
 import { DefaultReactGridSuggestionItem } from "./types.js";
 
 export async function getDefaultReactEmojiPickerItems<

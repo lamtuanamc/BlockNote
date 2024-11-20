@@ -1,4 +1,4 @@
-import { BlockNoteEditor } from "@blocknote/core";
+import { BlockNoteEditor } from "blocknote-core-ts";
 import { useEffect, useState } from "react";
 
 // Hook which handles keyboard navigation of a suggestion menu. Up & down arrow

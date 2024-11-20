@@ -6,7 +6,7 @@ import {
   DefaultStyleSchema,
   InlineContentSchema,
   StyleSchema,
-} from "@blocknote/core";
+} from "blocknote-core-ts";
 
 export type DragHandleMenuProps<
   BSchema extends BlockSchema = DefaultBlockSchema,

@@ -2,7 +2,7 @@ import {
   DragHandleMenuProps,
   useBlockNoteEditor,
   useComponentsContext,
-} from "@blocknote/react";
+} from "blocknote-react-ts";
 
 export function ResetBlockTypeItem(props: DragHandleMenuProps) {
   const editor = useBlockNoteEditor();

@@ -1,7 +1,7 @@
-import "@blocknote/core/fonts/inter.css";
-import { BlockNoteView } from "@blocknote/mantine";
-import "@blocknote/mantine/style.css";
-import { useCreateBlockNote } from "@blocknote/react";
+import "blocknote-core-ts/fonts/inter.css";
+import { BlockNoteView } from "blocknote-mantine-ts";
+import "blocknote-mantine-ts/style.css";
+import { useCreateBlockNote } from "blocknote-react-ts";
 import {
   DOCXExporter,
   docxDefaultSchemaMappings,

@@ -5,7 +5,7 @@ import {
   InlineContentSchema,
   PartialTableContent,
   StyleSchema,
-} from "@blocknote/core";
+} from "blocknote-core-ts";
 
 import { useComponentsContext } from "../../../../editor/ComponentsContext.js";
 import { useBlockNoteEditor } from "../../../../hooks/useBlockNoteEditor.js";

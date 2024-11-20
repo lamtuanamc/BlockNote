@@ -1,4 +1,4 @@
-import { LinkToolbarProps, useComponentsContext } from "@blocknote/react";
+import { LinkToolbarProps, useComponentsContext } from "blocknote-react-ts";
 
 // Custom Link Toolbar button to open a browser alert.
 export function AlertButton(props: LinkToolbarProps) {

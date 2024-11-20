@@ -1,7 +1,7 @@
-import "@blocknote/core/fonts/inter.css";
-import { useCreateBlockNote } from "@blocknote/react";
-import { BlockNoteView } from "@blocknote/mantine";
-import "@blocknote/mantine/style.css";
+import "blocknote-core-ts/fonts/inter.css";
+import { useCreateBlockNote } from "blocknote-react-ts";
+import { BlockNoteView } from "blocknote-mantine-ts";
+import "blocknote-mantine-ts/style.css";
 
 // Uploads a file to tmpfiles.org and returns the URL to the uploaded file.
 async function uploadFile(file: File) {

@@ -2,7 +2,7 @@ import {
   BlockNoteEditor,
   BlockNoteSchema,
   PartialBlock,
-} from "@blocknote/core";
+} from "blocknote-core-ts";
 import { afterAll, beforeAll, beforeEach } from "vitest";
 
 import { withMultiColumn } from "../blocks/schema.js";

@@ -1,8 +1,8 @@
-import { locales } from "@blocknote/core";
-import "@blocknote/core/fonts/inter.css";
-import { BlockNoteView } from "@blocknote/mantine";
-import "@blocknote/mantine/style.css";
-import { useCreateBlockNote } from "@blocknote/react";
+import { locales } from "blocknote-core-ts";
+import "blocknote-core-tsts/fonts/inter.css";
+import { BlockNoteView } from "blocknote-mantine-ts";
+import "blocknote-mantine-ts/style.css";
+import { useCreateBlockNote } from "blocknote-react-ts";
 // import { useTranslation } from "some-i18n-library"; // You can use any i18n library you like
 
 export default function App() {

@@ -1,4 +1,4 @@
-import { createReactStyleSpec } from "@blocknote/react";
+import { createReactStyleSpec } from "blocknote-react-ts";
 
 // The Font style.
 export const Font = createReactStyleSpec(

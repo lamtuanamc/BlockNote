@@ -7,10 +7,10 @@
  * (the reason is that this is not used in the examples, is that we use multiple BlockNote instances in the website / example project with different shemas.
  * This method only works if you use one custom schema in your app)
  */
-import "@blocknote/core";
+import "blocknote-core-ts";
 import type { schema } from "./App";
 
-declare module "@blocknote/core" {
+declare module "blocknote-core-ts" {
   // Override the default schema types
   type DefaultStyleSchema = typeof schema.styleSchema;
   type DefaultBlockSchema = typeof schema.blockSchema;

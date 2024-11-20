@@ -5,8 +5,8 @@ import {
   TooltipProvider as AriakitTooltipProvider,
 } from "@ariakit/react";
 
-import { assertEmpty, isSafari, mergeCSSClasses } from "@blocknote/core";
-import { ComponentProps } from "@blocknote/react";
+import { assertEmpty, isSafari, mergeCSSClasses } from "blocknote-core-ts";
+import { ComponentProps } from "blocknote-react-ts";
 import { forwardRef } from "react";
 
 type ToolbarButtonProps = ComponentProps["FormattingToolbar"]["Button"] &

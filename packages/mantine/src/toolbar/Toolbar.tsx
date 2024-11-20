@@ -1,7 +1,7 @@
 import { Group as MantineGroup } from "@mantine/core";
 
-import { assertEmpty } from "@blocknote/core";
-import { ComponentProps } from "@blocknote/react";
+import { assertEmpty } from "blocknote-core-ts";
+import { ComponentProps } from "blocknote-react-ts";
 import { mergeRefs, useFocusTrap, useFocusWithin } from "@mantine/hooks";
 import { forwardRef } from "react";
 

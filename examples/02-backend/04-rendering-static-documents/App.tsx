@@ -1,5 +1,5 @@
-import "@blocknote/core/fonts/inter.css";
-import "@blocknote/core/style.css";
+import "blocknote-core-ts/fonts/inter.css";
+import "blocknote-core-tsts/style.css";
 
 /**
  On Server Side, you can use the ServerBlockNoteEditor to render BlockNote documents to HTML. e.g.:
@@ -11,8 +11,8 @@ import "@blocknote/core/style.css";
 
 You can then use render this HTML as a static page or send it to the client. Make sure to include the editor stylesheets:
 
-    import "@blocknote/core/fonts/inter.css";
-    import "@blocknote/core/style.css";
+    import "blocknote-core-tsts/fonts/inter.css";
+    import "blocknote-core-tsts/style.css";
 
 This example has the HTML hard-coded, but shows at least how the document will be rendered when the appropriate style sheets are loaded.
  */

@@ -4,8 +4,8 @@ import {
   InlineContentSchema,
   insertOrUpdateBlock,
   StyleSchema,
-} from "@blocknote/core";
-import { DefaultReactSuggestionItem } from "@blocknote/react";
+} from "blocknote-core-ts";
+import { DefaultReactSuggestionItem } from "blocknote-react-ts";
 import { TbColumns2, TbColumns3 } from "react-icons/tb";
 
 import { multiColumnSchema } from "../../blocks/schema.js";

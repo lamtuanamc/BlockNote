@@ -1,4 +1,4 @@
-import { BlockNoteEditor, StyleSchema } from "@blocknote/core";
+import { BlockNoteEditor, StyleSchema } from "blocknote-core-ts";
 
 import { useState } from "react";
 import { useBlockNoteContext } from "../editor/BlockNoteContext.js";

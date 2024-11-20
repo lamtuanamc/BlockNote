@@ -20,6 +20,18 @@ export const pl: Dictionary = {
       aliases: ["h3", "naglowek3", "podnaglowek"],
       group: "Nagłówki",
     },
+    heading_4: {
+      title: "Heading 4",
+      subtext: "Subsection and group heading",
+      aliases: ["h4", "heading4", "subheading"],
+      group: "Headings",
+    },
+    heading_5: {
+      title: "Heading 5",
+      subtext: "Subsection and group heading",
+      aliases: ["h5", "heading5", "subheading"],
+      group: "Headings",
+    },
     numbered_list: {
       title: "Lista numerowana",
       subtext: "Używana do wyświetlania listy numerowanej",

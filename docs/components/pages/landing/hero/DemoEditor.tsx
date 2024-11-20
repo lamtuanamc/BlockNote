@@ -4,21 +4,21 @@ import {
   filterSuggestionItems,
   locales,
   uploadToTmpFilesDotOrg_DEV_ONLY,
-} from "@blocknote/core";
-import "@blocknote/core/fonts/inter.css";
+} from "blocknote-core-ts";
+import "blocknote-core-tsts/fonts/inter.css";
 import {
   getDefaultReactSlashMenuItems,
   SuggestionMenuController,
   useCreateBlockNote,
-} from "@blocknote/react";
-import { BlockNoteView } from "@blocknote/mantine";
+} from "blocknote-react-ts";
+import { BlockNoteView } from "blocknote-mantine-ts";
 import {
   getMultiColumnSlashMenuItems,
   locales as multiColumnLocales,
   multiColumnDropCursor,
   withMultiColumn,
 } from "@blocknote/xl-multi-column";
-import "@blocknote/mantine/style.css";
+import "blocknote-mantine-ts/style.css";
 import { useCallback, useMemo, useState } from "react";
 import YPartyKitProvider from "y-partykit/provider";
 import * as Y from "yjs";

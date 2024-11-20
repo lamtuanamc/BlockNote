@@ -20,6 +20,18 @@ export const zh: Dictionary = {
       aliases: ["h3", "heading3", "subheading", "标题", "三级标题"],
       group: "标题",
     },
+    heading_4: {
+      title: "Heading 4",
+      subtext: "Subsection and group heading",
+      aliases: ["h4", "heading4", "subheading"],
+      group: "Headings",
+    },
+    heading_5: {
+      title: "Heading 5",
+      subtext: "Subsection and group heading",
+      aliases: ["h5", "heading5", "subheading"],
+      group: "Headings",
+    },
     numbered_list: {
       title: "有序列表",
       subtext: "用于显示有序列表",

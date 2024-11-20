@@ -4,7 +4,7 @@ import {
   InlineContentSchema,
   StyleSchema,
   mergeCSSClasses,
-} from "@blocknote/core";
+} from "blocknote-core-ts";
 
 import React, {
   ComponentProps,

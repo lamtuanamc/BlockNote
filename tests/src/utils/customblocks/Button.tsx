@@ -2,7 +2,7 @@ import {
   BlockNoteEditor,
   createBlockSpec,
   defaultProps,
-} from "@blocknote/core";
+} from "blocknote-core-ts";
 import { RiRadioButtonFill } from "react-icons/ri";
 
 export const Button = createBlockSpec(

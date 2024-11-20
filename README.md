@@ -34,10 +34,10 @@ See our homepage @ [https://www.blocknotejs.org](https://www.blocknotejs.org/) o
 [![npm version](https://badge.fury.io/js/%40blocknote%2Freact.svg)](https://badge.fury.io/js/%40blocknote%2Freact)
 
 ```typescript
-import { useCreateBlockNote } from "@blocknote/react";
-import { BlockNoteView } from "@blocknote/mantine";
-import "@blocknote/core/fonts/inter.css";
-import "@blocknote/mantine/style.css";
+import { useCreateBlockNote } from "blocknote-react-ts";
+import { BlockNoteView } from "blocknote-mantine-ts";
+import "blocknote-core-ts/fonts/inter.css";
+import "blocknote-mantine-ts/style.css";
 
 function App() {
   const editor = useCreateBlockNote();
@@ -46,9 +46,9 @@ function App() {
 }
 ```
 
-`@blocknote/react` comes with a fully styled UI that makes it an instant, polished editor ready to use in your app.
+`blocknote-react-ts` comes with a fully styled UI that makes it an instant, polished editor ready to use in your app.
 
-If you prefer to create your own UI components (menus), or don't want to use React, you can use `@blocknote/core` (_advanced_, [see docs](https://www.blocknotejs.org/docs/vanilla-js)).
+If you prefer to create your own UI components (menus), or don't want to use React, you can use `blocknote-core-ts` (_advanced_, [see docs](https://www.blocknotejs.org/docs/vanilla-js)).
 
 # Features
 

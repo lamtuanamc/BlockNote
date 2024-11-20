@@ -1,7 +1,7 @@
 import { mergeRefs } from "@mantine/hooks";
 
-import { assertEmpty } from "@blocknote/core";
-import { ComponentProps, elementOverflow } from "@blocknote/react";
+import { assertEmpty } from "blocknote-core-ts";
+import { ComponentProps, elementOverflow } from "blocknote-react-ts";
 import { forwardRef, useEffect, useRef } from "react";
 
 export const GridSuggestionMenuItem = forwardRef<

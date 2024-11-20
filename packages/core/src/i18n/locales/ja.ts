@@ -20,6 +20,18 @@ export const ja: Dictionary = {
       aliases: ["h3", "見出し3", "subheading", "小見出し"],
       group: "見出し",
     },
+    heading_4: {
+      title: "Heading 4",
+      subtext: "Subsection and group heading",
+      aliases: ["h4", "heading4", "subheading"],
+      group: "Headings",
+    },
+    heading_5: {
+      title: "Heading 5",
+      subtext: "Subsection and group heading",
+      aliases: ["h5", "heading5", "subheading"],
+      group: "Headings",
+    },
     numbered_list: {
       title: "番号付リスト",
       subtext: "番号付リストを表示するために使用",

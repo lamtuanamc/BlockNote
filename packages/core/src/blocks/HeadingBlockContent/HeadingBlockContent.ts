@@ -11,7 +11,7 @@ import { defaultProps } from "../defaultProps.js";
 
 export const headingPropSchema = {
   ...defaultProps,
-  level: { default: 1, values: [1, 2, 3] as const },
+  level: { default: 1, values: [1, 2, 3, 4, 5] as const },
 } satisfies PropSchema;
 
 const HeadingBlockContent = createStronglyTypedTiptapNode({
@@ -42,7 +42,7 @@ const HeadingBlockContent = createStronglyTypedTiptapNode({
 
   addInputRules() {
     return [
-      ...[1, 2, 3].map((level) => {
+      ...[1, 2, 3, 4, 5].map((level) => {
         // Creates a heading of appropriate level when starting with "#", "##", or "###".
         return new InputRule({
           find: new RegExp(`^(#{${level}})\\s$`),
@@ -50,7 +50,9 @@ const HeadingBlockContent = createStronglyTypedTiptapNode({
             const blockInfo = getBlockInfoFromSelection(state);
             if (
               !blockInfo.isBlockContainer ||
-              blockInfo.blockContent.node.type.spec.content !== "inline*"
+              blockInfo.blockContent.node.type.spec.content !== "inline*" ||
+              (blockInfo.blockContent.node.type.name !== "paragraph" &&
+                blockInfo.blockContent.node.type.name !== "heading")
             ) {
               return;
             }
@@ -83,7 +85,9 @@ const HeadingBlockContent = createStronglyTypedTiptapNode({
         const blockInfo = getBlockInfoFromSelection(this.editor.state);
         if (
           !blockInfo.isBlockContainer ||
-          blockInfo.blockContent.node.type.spec.content !== "inline*"
+          blockInfo.blockContent.node.type.spec.content !== "inline*" ||
+          (blockInfo.blockContent.node.type.name !== "paragraph" &&
+            blockInfo.blockContent.node.type.name !== "heading")
         ) {
           return true;
         }
@@ -102,7 +106,9 @@ const HeadingBlockContent = createStronglyTypedTiptapNode({
         const blockInfo = getBlockInfoFromSelection(this.editor.state);
         if (
           !blockInfo.isBlockContainer ||
-          blockInfo.blockContent.node.type.spec.content !== "inline*"
+          blockInfo.blockContent.node.type.spec.content !== "inline*" ||
+          (blockInfo.blockContent.node.type.name !== "paragraph" &&
+            blockInfo.blockContent.node.type.name !== "heading")
         ) {
           return true;
         }
@@ -120,7 +126,9 @@ const HeadingBlockContent = createStronglyTypedTiptapNode({
         const blockInfo = getBlockInfoFromSelection(this.editor.state);
         if (
           !blockInfo.isBlockContainer ||
-          blockInfo.blockContent.node.type.spec.content !== "inline*"
+          blockInfo.blockContent.node.type.spec.content !== "inline*" ||
+          (blockInfo.blockContent.node.type.name !== "paragraph" &&
+            blockInfo.blockContent.node.type.name !== "heading")
         ) {
           return true;
         }
@@ -130,6 +138,46 @@ const HeadingBlockContent = createStronglyTypedTiptapNode({
             type: "heading",
             props: {
               level: 3 as any,
+            },
+          })
+        );
+      },
+      "Mod-Alt-4": () => {
+        const blockInfo = getBlockInfoFromSelection(this.editor.state);
+        if (
+          !blockInfo.isBlockContainer ||
+          blockInfo.blockContent.node.type.spec.content !== "inline*" ||
+          (blockInfo.blockContent.node.type.name !== "paragraph" &&
+            blockInfo.blockContent.node.type.name !== "heading")
+        ) {
+          return true;
+        }
+
+        return this.editor.commands.command(
+          updateBlockCommand(this.options.editor, blockInfo.bnBlock.beforePos, {
+            type: "heading",
+            props: {
+              level: 4 as any,
+            },
+          })
+        );
+      },
+      "Mod-Alt-5": () => {
+        const blockInfo = getBlockInfoFromSelection(this.editor.state);
+        if (
+          !blockInfo.isBlockContainer ||
+          blockInfo.blockContent.node.type.spec.content !== "inline*" ||
+          (blockInfo.blockContent.node.type.name !== "paragraph" &&
+            blockInfo.blockContent.node.type.name !== "heading")
+        ) {
+          return true;
+        }
+
+        return this.editor.commands.command(
+          updateBlockCommand(this.options.editor, blockInfo.bnBlock.beforePos, {
+            type: "heading",
+            props: {
+              level: 5 as any,
             },
           })
         );
@@ -163,6 +211,16 @@ const HeadingBlockContent = createStronglyTypedTiptapNode({
       {
         tag: "h3",
         attrs: { level: 3 },
+        node: "heading",
+      },
+      {
+        tag: "h4",
+        attrs: { level: 4 },
+        node: "heading",
+      },
+      {
+        tag: "h5",
+        attrs: { level: 5 },
         node: "heading",
       },
     ];

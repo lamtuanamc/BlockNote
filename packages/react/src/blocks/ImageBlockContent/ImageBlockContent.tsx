@@ -1,4 +1,8 @@
-import { FileBlockConfig, imageBlockConfig, imageParse } from "@blocknote/core";
+import {
+  FileBlockConfig,
+  imageBlockConfig,
+  imageParse,
+} from "blocknote-core-ts";
 import { useState } from "react";
 import { RiImage2Fill } from "react-icons/ri";
 

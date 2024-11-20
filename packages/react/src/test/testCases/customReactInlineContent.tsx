@@ -6,7 +6,7 @@ import {
   EditorTestCases,
   defaultInlineContentSpecs,
   uploadToTmpFilesDotOrg_DEV_ONLY,
-} from "@blocknote/core";
+} from "blocknote-core-ts";
 import { createReactInlineContentSpec } from "../../schema/ReactInlineContentSpec.js";
 
 const mention = createReactInlineContentSpec(

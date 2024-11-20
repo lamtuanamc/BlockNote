@@ -1,4 +1,4 @@
-import { SideMenuProps } from "@blocknote/react";
+import { SideMenuProps } from "blocknote-react-ts";
 import { Delete, DragIndicator } from "@mui/icons-material";
 import {
   Box,

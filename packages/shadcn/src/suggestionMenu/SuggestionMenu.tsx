@@ -1,7 +1,7 @@
-import { ComponentProps } from "@blocknote/react";
+import { ComponentProps } from "blocknote-react-ts";
 import { forwardRef } from "react";
 
-import { assertEmpty } from "@blocknote/core";
+import { assertEmpty } from "blocknote-core-ts";
 import { cn } from "../lib/utils.js";
 
 export const SuggestionMenu = forwardRef<

@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
-import { BlockNoteEditor, defaultProps } from "@blocknote/core";
-import { createReactBlockSpec } from "@blocknote/react";
+import { BlockNoteEditor, defaultProps } from "blocknote-core-ts";
+import { createReactBlockSpec } from "blocknote-react-ts";
 import { useEffect, useState } from "react";
 import { RiAlertFill } from "react-icons/ri";
 

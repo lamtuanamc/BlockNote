@@ -1,7 +1,7 @@
-import { BlockNoteSchema, defaultStyleSpecs } from "@blocknote/core";
-import "@blocknote/core/fonts/inter.css";
-import { BlockNoteView } from "@blocknote/mantine";
-import "@blocknote/mantine/style.css";
+import { BlockNoteSchema, defaultStyleSpecs } from "blocknote-core-ts";
+import "blocknote-core-tsts/fonts/inter.css";
+import { BlockNoteView } from "blocknote-mantine-ts";
+import "blocknote-mantine-ts/style.css";
 import {
   BasicTextStyleButton,
   BlockTypeSelect,
@@ -17,7 +17,7 @@ import {
   useBlockNoteEditor,
   useComponentsContext,
   useCreateBlockNote,
-} from "@blocknote/react";
+} from "blocknote-react-ts";
 
 import { RiText } from "react-icons/ri";
 

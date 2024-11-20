@@ -1,12 +1,12 @@
-import "@blocknote/core/fonts/inter.css";
+import "blocknote-core-ts/fonts/inter.css";
 import {
   DefaultReactGridSuggestionItem,
   GridSuggestionMenuController,
   GridSuggestionMenuProps,
   useCreateBlockNote,
-} from "@blocknote/react";
-import { BlockNoteView } from "@blocknote/mantine";
-import "@blocknote/mantine/style.css";
+} from "blocknote-react-ts";
+import { BlockNoteView } from "blocknote-mantine-ts";
+import "blocknote-mantine-ts/style.css";
 
 import "./styles.css";
 

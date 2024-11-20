@@ -4,7 +4,7 @@ import {
   checkBlockIsFileBlockWithPlaceholder,
   InlineContentSchema,
   StyleSchema,
-} from "@blocknote/core";
+} from "blocknote-core-ts";
 import {
   ChangeEvent,
   KeyboardEvent,

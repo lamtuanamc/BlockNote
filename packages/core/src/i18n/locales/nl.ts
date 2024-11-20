@@ -20,6 +20,18 @@ export const nl: Dictionary = {
       aliases: ["h3", "kop3", "subkop"],
       group: "Koppen",
     },
+    heading_4: {
+      title: "Heading 4",
+      subtext: "Subsection and group heading",
+      aliases: ["h4", "heading4", "subheading"],
+      group: "Headings",
+    },
+    heading_5: {
+      title: "Heading 5",
+      subtext: "Subsection and group heading",
+      aliases: ["h5", "heading5", "subheading"],
+      group: "Headings",
+    },
     numbered_list: {
       title: "Genummerde Lijst",
       subtext: "Gebruikt om een genummerde lijst weer te geven",

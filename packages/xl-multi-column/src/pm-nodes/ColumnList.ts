@@ -1,4 +1,4 @@
-import { createStronglyTypedTiptapNode } from "@blocknote/core";
+import { createStronglyTypedTiptapNode } from "blocknote-core-ts";
 
 export const ColumnList = createStronglyTypedTiptapNode({
   name: "columnList",

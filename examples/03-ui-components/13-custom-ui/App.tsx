@@ -1,13 +1,13 @@
-import { filterSuggestionItems } from "@blocknote/core";
-import "@blocknote/core/fonts/inter.css";
+import { filterSuggestionItems } from "blocknote-core-ts";
+import "blocknote-core-tsts/fonts/inter.css";
 import {
   BlockNoteViewRaw,
   getDefaultReactSlashMenuItems,
   SideMenuController,
   SuggestionMenuController,
   useCreateBlockNote,
-} from "@blocknote/react";
-import "@blocknote/react/style.css";
+} from "blocknote-react-ts";
+import "blocknote-react-ts/style.css";
 import { createTheme, ThemeProvider, useMediaQuery } from "@mui/material";
 import { useMemo } from "react";
 

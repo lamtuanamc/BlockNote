@@ -1,7 +1,7 @@
-import "@blocknote/core/fonts/inter.css";
-import { useCreateBlockNote } from "@blocknote/react";
-import { BlockNoteView } from "@blocknote/mantine";
-import "@blocknote/mantine/style.css";
+import "blocknote-core-ts/fonts/inter.css";
+import { useCreateBlockNote } from "blocknote-react-ts";
+import { BlockNoteView } from "blocknote-mantine-ts";
+import "blocknote-mantine-ts/style.css";
 import { createClient } from "@liveblocks/client";
 import LiveblocksProvider from "@liveblocks/yjs";
 import * as Y from "yjs";

@@ -3,8 +3,8 @@ import {
   FormProvider as AriakitFormProvider,
 } from "@ariakit/react";
 
-import { assertEmpty } from "@blocknote/core";
-import { ComponentProps } from "@blocknote/react";
+import { assertEmpty } from "blocknote-core-ts";
+import { ComponentProps } from "blocknote-react-ts";
 import { forwardRef } from "react";
 
 export const PanelFileInput = forwardRef<

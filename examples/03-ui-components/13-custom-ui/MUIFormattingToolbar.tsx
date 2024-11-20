@@ -1,9 +1,9 @@
-import { Block } from "@blocknote/core";
+import { Block } from "blocknote-core-ts";
 import {
   blockTypeSelectItems,
   useBlockNoteEditor,
   useEditorContentOrSelectionChange,
-} from "@blocknote/react";
+} from "blocknote-react-ts";
 import {
   Done,
   FormatAlignCenter,

@@ -7,7 +7,7 @@ import {
   DefaultStyleSchema,
   InlineContentSchema,
   StyleSchema,
-} from "@blocknote/core";
+} from "blocknote-core-ts";
 import { DependencyList, useMemo } from "react";
 
 /**

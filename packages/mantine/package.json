@@ -1,12 +1,12 @@
 {
-  "name": "@blocknote/mantine",
+  "name": "blocknote-mantine-ts",
   "homepage": "https://github.com/TypeCellOS/BlockNote",
   "private": false,
   "sideEffects": [
     "*.css"
   ],
   "license": "MPL-2.0",
-  "version": "0.19.1",
+  "version": "0.19.16",
   "files": [
     "dist",
     "types",
@@ -50,8 +50,8 @@
     "clean": "rimraf dist && rimraf types"
   },
   "dependencies": {
-    "@blocknote/core": "^0.19.1",
-    "@blocknote/react": "^0.19.1",
+    "blocknote-core-ts": "^0.19.13",
+    "blocknote-react-ts": "latest",
     "@mantine/core": "^7.10.1",
     "@mantine/hooks": "^7.10.1",
     "@mantine/utils": "^6.0.21",

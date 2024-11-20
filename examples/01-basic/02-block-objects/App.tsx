@@ -1,8 +1,8 @@
-import { Block } from "@blocknote/core";
-import "@blocknote/core/fonts/inter.css";
-import { useCreateBlockNote } from "@blocknote/react";
-import { BlockNoteView } from "@blocknote/mantine";
-import "@blocknote/mantine/style.css";
+import { Block } from "blocknote-core-ts";
+import "blocknote-core-tsts/fonts/inter.css";
+import { useCreateBlockNote } from "blocknote-react-ts";
+import { BlockNoteView } from "blocknote-mantine-ts";
+import "blocknote-mantine-ts/style.css";
 import { useState } from "react";
 
 import "./styles.css";

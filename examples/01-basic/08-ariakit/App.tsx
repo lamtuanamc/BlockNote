@@ -1,5 +1,5 @@
-import "@blocknote/core/fonts/inter.css";
-import { useCreateBlockNote } from "@blocknote/react";
+import "blocknote-core-ts/fonts/inter.css";
+import { useCreateBlockNote } from "blocknote-react-ts";
 import { BlockNoteView } from "@blocknote/ariakit";
 import "@blocknote/ariakit/style.css";
 

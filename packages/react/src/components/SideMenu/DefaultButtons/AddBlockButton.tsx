@@ -5,7 +5,7 @@ import {
   DefaultStyleSchema,
   InlineContentSchema,
   StyleSchema,
-} from "@blocknote/core";
+} from "blocknote-core-ts";
 import { AiOutlinePlus } from "react-icons/ai";
 
 import { useCallback } from "react";

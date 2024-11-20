@@ -1,4 +1,4 @@
-import { FilePanelProps, useBlockNoteEditor } from "@blocknote/react";
+import { FilePanelProps, useBlockNoteEditor } from "blocknote-react-ts";
 import Uppy, { UploadSuccessCallback } from "@uppy/core";
 import "@uppy/core/dist/style.min.css";
 import "@uppy/dashboard/dist/style.min.css";

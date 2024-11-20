@@ -1,10 +1,10 @@
-import type { BlockNoteEditor } from "@blocknote/core";
+import type { BlockNoteEditor } from "blocknote-core-ts";
 import {
   UniqueID,
   getBlockInfo,
   getNearestBlockPos,
   nodeToBlock,
-} from "@blocknote/core";
+} from "blocknote-core-ts";
 import { EditorState, Plugin } from "prosemirror-state";
 import { dropPoint } from "prosemirror-transform";
 import { EditorView } from "prosemirror-view";

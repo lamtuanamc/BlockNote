@@ -1,4 +1,4 @@
-### @blocknote/core/src/api
+### blocknote-core-ts/src/api
 
 Implements the BlockNote API surface
 

@@ -1,5 +1,4 @@
-import { fileBlockConfig, fileParse } from "@blocknote/core";
-
+import { fileBlockConfig, fileParse } from "blocknote-core-ts";
 import {
   createReactBlockSpec,
   ReactCustomBlockRenderProps,

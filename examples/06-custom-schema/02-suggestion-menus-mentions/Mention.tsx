@@ -1,4 +1,4 @@
-import { createReactInlineContentSpec } from "@blocknote/react";
+import { createReactInlineContentSpec } from "blocknote-react-ts";
 
 // The Mention inline content.
 export const Mention = createReactInlineContentSpec(

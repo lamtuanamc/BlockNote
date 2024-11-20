@@ -2,7 +2,7 @@
 //   const newDict: any = {} as any;
 
 import type { en } from "./locales/index.js";
-import { BlockNoteEditor } from "@blocknote/core";
+import { BlockNoteEditor } from "blocknote-core-ts";
 
 //   for (const key in dict) {
 //     if (typeof dict[key] === "object") {

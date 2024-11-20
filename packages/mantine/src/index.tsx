@@ -3,14 +3,14 @@ import {
   InlineContentSchema,
   mergeCSSClasses,
   StyleSchema,
-} from "@blocknote/core";
+} from "blocknote-core-ts";
 import {
   BlockNoteViewRaw,
   Components,
   ComponentsContext,
   useBlockNoteContext,
   usePrefersColorScheme,
-} from "@blocknote/react";
+} from "blocknote-react-ts";
 import { MantineProvider } from "@mantine/core";
 import { ComponentProps, useCallback } from "react";
 

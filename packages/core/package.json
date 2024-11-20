@@ -1,12 +1,12 @@
 {
-  "name": "@blocknote/core",
+  "name": "blocknote-core-ts",
   "homepage": "https://github.com/TypeCellOS/BlockNote",
   "private": false,
   "sideEffects": [
     "*.css"
   ],
   "license": "MPL-2.0",
-  "version": "0.19.1",
+  "version": "0.19.16",
   "files": [
     "dist",
     "types",

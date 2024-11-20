@@ -1,12 +1,12 @@
 {
-  "name": "@blocknote/react",
+  "name": "blocknote-react-ts",
   "homepage": "https://github.com/TypeCellOS/BlockNote",
   "private": false,
   "sideEffects": [
     "*.css"
   ],
   "license": "MPL-2.0",
-  "version": "0.19.1",
+  "version": "0.19.16",
   "files": [
     "dist",
     "types",
@@ -52,10 +52,10 @@
     "clean": "rimraf dist && rimraf types"
   },
   "dependencies": {
-    "@blocknote/core": "^0.19.1",
     "@floating-ui/react": "^0.26.4",
     "@tiptap/core": "^2.7.1",
     "@tiptap/react": "^2.7.1",
+    "blocknote-core-ts": "latest",
     "lodash.merge": "^4.6.2",
     "react-icons": "^5.2.1"
   },

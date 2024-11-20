@@ -3,7 +3,7 @@ import {
   DefaultProps,
   InlineContentSchema,
   StyleSchema,
-} from "@blocknote/core";
+} from "blocknote-core-ts";
 import { flip, offset } from "@floating-ui/react";
 import { FC, useMemo, useRef, useState } from "react";
 

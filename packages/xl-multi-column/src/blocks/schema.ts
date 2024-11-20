@@ -3,7 +3,7 @@ import {
   BlockSchema,
   InlineContentSchema,
   StyleSchema,
-} from "@blocknote/core";
+} from "blocknote-core-ts";
 import { ColumnBlock, ColumnListBlock } from "./Columns/index.js";
 
 export const multiColumnSchema = BlockNoteSchema.create({

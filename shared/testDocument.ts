@@ -1,7 +1,7 @@
 import {
   BlockNoteSchema,
   partialBlocksToBlocksForTesting,
-} from "@blocknote/core";
+} from "blocknote-core-ts";
 
 export const testDocument = partialBlocksToBlocksForTesting(
   BlockNoteSchema.create(),

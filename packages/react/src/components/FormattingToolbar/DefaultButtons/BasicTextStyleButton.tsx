@@ -4,7 +4,7 @@ import {
   InlineContentSchema,
   StyleSchema,
   formatKeyboardShortcut,
-} from "@blocknote/core";
+} from "blocknote-core-ts";
 import { useMemo, useState } from "react";
 import { IconType } from "react-icons";
 import {

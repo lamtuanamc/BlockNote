@@ -4,7 +4,7 @@ import {
   DefaultStyleSchema,
   InlineContentSchema,
   StyleSchema,
-} from "@blocknote/core";
+} from "blocknote-core-ts";
 import { FC, useCallback, useMemo, useState } from "react";
 
 import { FloatingPortal } from "@floating-ui/react";

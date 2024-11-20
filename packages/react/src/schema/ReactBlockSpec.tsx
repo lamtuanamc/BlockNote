@@ -18,7 +18,7 @@ import {
   propsToAttributes,
   StyleSchema,
   wrapInBlockStructure,
-} from "@blocknote/core";
+} from "blocknote-core-ts";
 import {
   NodeView,
   NodeViewContent,

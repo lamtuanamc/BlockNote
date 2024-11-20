@@ -3,7 +3,7 @@ import {
   elementOverflow,
   SuggestionMenuProps,
   useBlockNoteEditor,
-} from "@blocknote/react";
+} from "blocknote-react-ts";
 import {
   Chip,
   List,

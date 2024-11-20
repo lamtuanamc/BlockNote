@@ -8,10 +8,10 @@ import {
   S3RequestPresigner,
   getSignedUrl,
 } from "@aws-sdk/s3-request-presigner";
-import "@blocknote/core/fonts/inter.css";
-import { BlockNoteView } from "@blocknote/mantine";
-import "@blocknote/mantine/style.css";
-import { useCreateBlockNote } from "@blocknote/react";
+import "blocknote-core-ts/fonts/inter.css";
+import { BlockNoteView } from "blocknote-mantine-ts";
+import "blocknote-mantine-ts/style.css";
+import { useCreateBlockNote } from "blocknote-react-ts";
 
 /**
  * SERVER Code. Normally, this part would be implemented on your server, so you

@@ -20,6 +20,18 @@ export const ko: Dictionary = {
       aliases: ["h3", "제목3", "subheading"],
       group: "제목",
     },
+    heading_4: {
+      title: "Heading 4",
+      subtext: "Subsection and group heading",
+      aliases: ["h4", "heading4", "subheading"],
+      group: "Headings",
+    },
+    heading_5: {
+      title: "Heading 5",
+      subtext: "Subsection and group heading",
+      aliases: ["h5", "heading5", "subheading"],
+      group: "Headings",
+    },
     numbered_list: {
       title: "번호 매기기 목록",
       subtext: "번호가 매겨진 목록을 추가합니다.",

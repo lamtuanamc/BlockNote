@@ -4,7 +4,7 @@ import {
   StyleSchema,
   SuggestionMenuState,
   filterSuggestionItems,
-} from "@blocknote/core";
+} from "blocknote-core-ts";
 import { flip, offset, shift, size } from "@floating-ui/react";
 import { FC, useCallback, useMemo } from "react";
 
@@ -108,7 +108,8 @@ export function SuggestionMenuController<
         // the menu from being cut off by the confines of the screen.
         flip({
           mainAxis: true,
-          crossAxis: false,
+          crossAxis: true,
+          fallbackPlacements: ["top-start", "bottom-start"],
         }),
         shift(),
         size({

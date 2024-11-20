@@ -1,4 +1,4 @@
-import { Exporter, InlineContentSchema, TableContent } from "@blocknote/core";
+import { Exporter, InlineContentSchema, TableContent } from "blocknote-core-ts";
 import {
   Table as DocxTable,
   Paragraph,

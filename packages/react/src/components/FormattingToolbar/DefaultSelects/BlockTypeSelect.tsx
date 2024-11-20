@@ -4,13 +4,15 @@ import {
   Dictionary,
   InlineContentSchema,
   StyleSchema,
-} from "@blocknote/core";
+} from "blocknote-core-ts";
 import { useMemo, useState } from "react";
 import type { IconType } from "react-icons";
 import {
   RiH1,
   RiH2,
   RiH3,
+  RiH4,
+  RiH5,
   RiListCheck3,
   RiListOrdered,
   RiListUnordered,
@@ -74,6 +76,26 @@ export const blockTypeSelectItems = (
       block.type === "heading" &&
       "level" in block.props &&
       block.props.level === 3,
+  },
+  {
+    name: "Heading 4",
+    type: "heading",
+    props: { level: 4 },
+    icon: RiH4,
+    isSelected: (block) =>
+      block.type === "heading" &&
+      "level" in block.props &&
+      block.props.level === 4,
+  },
+  {
+    name: "Heading 5",
+    type: "heading",
+    props: { level: 5 },
+    icon: RiH5,
+    isSelected: (block) =>
+      block.type === "heading" &&
+      "level" in block.props &&
+      block.props.level === 5,
   },
   {
     name: dict.slash_menu.bullet_list.title,

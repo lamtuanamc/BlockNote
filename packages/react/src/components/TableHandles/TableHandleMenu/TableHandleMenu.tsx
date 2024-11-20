@@ -3,7 +3,7 @@ import {
   DefaultStyleSchema,
   InlineContentSchema,
   StyleSchema,
-} from "@blocknote/core";
+} from "blocknote-core-ts";
 import { ReactNode } from "react";
 
 import { useComponentsContext } from "../../../editor/ComponentsContext.js";

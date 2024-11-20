@@ -5,7 +5,7 @@ import {
   DefaultStyleSchema,
   InlineContentSchema,
   StyleSchema,
-} from "@blocknote/core";
+} from "blocknote-core-ts";
 import { MdDragIndicator } from "react-icons/md";
 
 import { useComponentsContext } from "../../../editor/ComponentsContext.js";

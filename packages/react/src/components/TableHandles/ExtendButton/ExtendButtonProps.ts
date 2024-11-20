@@ -6,7 +6,7 @@ import {
   InlineContentSchema,
   StyleSchema,
   TableHandlesState,
-} from "@blocknote/core";
+} from "blocknote-core-ts";
 
 export type ExtendButtonProps<
   I extends InlineContentSchema = DefaultInlineContentSchema,

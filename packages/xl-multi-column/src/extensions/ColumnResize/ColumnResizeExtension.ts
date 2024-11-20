@@ -1,4 +1,4 @@
-import { BlockNoteEditor, getNodeById } from "@blocknote/core";
+import { BlockNoteEditor, getNodeById } from "blocknote-core-ts";
 import { Extension } from "@tiptap/core";
 import { Node } from "prosemirror-model";
 import { Plugin, PluginKey, PluginView } from "prosemirror-state";

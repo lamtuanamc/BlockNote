@@ -20,6 +20,18 @@ export const vi: Dictionary = {
       aliases: ["h3", "tieude3", "tieudephu"],
       group: "Tiêu đề",
     },
+    heading_4: {
+      title: "Heading 4",
+      subtext: "Subsection and group heading",
+      aliases: ["h4", "heading4", "subheading"],
+      group: "Headings",
+    },
+    heading_5: {
+      title: "Heading 5",
+      subtext: "Subsection and group heading",
+      aliases: ["h5", "heading5", "subheading"],
+      group: "Headings",
+    },
     numbered_list: {
       title: "Danh sách đánh số",
       subtext: "Sử dụng để hiển thị danh sách có đánh số",

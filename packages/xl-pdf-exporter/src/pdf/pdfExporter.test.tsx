@@ -6,7 +6,7 @@ import {
   defaultBlockSpecs,
   defaultInlineContentSpecs,
   defaultStyleSpecs,
-} from "@blocknote/core";
+} from "blocknote-core-ts";
 import { Text } from "@react-pdf/renderer";
 import { testDocument } from "@shared/testDocument.js";
 import { prettyDOM, render } from "@testing-library/react";

@@ -2,8 +2,8 @@ import {
   useBlockNoteEditor,
   useComponentsContext,
   useEditorContentOrSelectionChange,
-} from "@blocknote/react";
-import "@blocknote/mantine/style.css";
+} from "blocknote-react-ts";
+import "blocknote-mantine-ts/style.css";
 import { useState } from "react";
 
 // Custom Formatting Toolbar Button to toggle blue text & background color.

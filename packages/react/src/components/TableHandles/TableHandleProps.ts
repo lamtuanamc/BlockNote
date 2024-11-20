@@ -6,7 +6,7 @@ import {
   InlineContentSchema,
   StyleSchema,
   TableHandlesState,
-} from "@blocknote/core";
+} from "blocknote-core-ts";
 import { DragEvent, FC } from "react";
 
 import { DragHandleMenuProps } from "../SideMenu/DragHandleMenu/DragHandleMenuProps.js";

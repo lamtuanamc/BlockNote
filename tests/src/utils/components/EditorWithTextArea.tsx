@@ -1,4 +1,4 @@
-import "@blocknote/core/style.css";
+import "blocknote-core-ts/style.css";
 import Editor from "./Editor.js";
 import styles from "./TextArea.module.css";
 

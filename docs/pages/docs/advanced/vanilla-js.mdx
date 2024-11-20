@@ -22,7 +22,7 @@ BlockNote is mainly designed as a quick and easy drop-in block-based editor for 
 To install only the vanilla JS parts of BlockNote with [NPM](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm), run:
 
 ```console
-npm install @blocknote/core
+npm install blocknote-core-ts
 ```
 
 ## Creating an editor
@@ -30,7 +30,7 @@ npm install @blocknote/core
 This is how to create a new BlockNote editor:
 
 ```typescript
-import { BlockNoteEditor } from "@blocknote/core";
+import { BlockNoteEditor } from "blocknote-core-ts";
 
 const editor = BlockNoteEditor.create();
 
@@ -64,7 +64,7 @@ editor[uiElement].onUpdate((uiElementState: ...) => {
 Let's look at how you could add the [Side Menu]() to your editor:
 
 ```typescript
-import { BlockNoteEditor } from "@blocknote/core";
+import { BlockNoteEditor } from "blocknote-core-ts";
 
 const editor = BlockNoteEditor.create({
   element: document.getElementById("root")!,

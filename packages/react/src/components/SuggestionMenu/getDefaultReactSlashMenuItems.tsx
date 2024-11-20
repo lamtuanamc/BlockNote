@@ -4,7 +4,7 @@ import {
   getDefaultSlashMenuItems,
   InlineContentSchema,
   StyleSchema,
-} from "@blocknote/core";
+} from "blocknote-core-ts";
 import {
   RiEmotionFill,
   RiFile2Line,
@@ -20,6 +20,8 @@ import {
   RiText,
   RiVolumeUpFill,
   RiCodeBlock,
+  RiH4,
+  RiH5,
 } from "react-icons/ri";
 import { DefaultReactSuggestionItem } from "./types.js";
 
@@ -27,6 +29,8 @@ const icons = {
   heading: RiH1,
   heading_2: RiH2,
   heading_3: RiH3,
+  heading_4: RiH4,
+  heading_5: RiH5,
   numbered_list: RiListOrdered,
   bullet_list: RiListUnordered,
   check_list: RiListCheck3,

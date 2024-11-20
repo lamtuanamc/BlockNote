@@ -1,7 +1,7 @@
 import { Column } from "../../pm-nodes/Column.js";
 import { ColumnList } from "../../pm-nodes/ColumnList.js";
 
-import { createBlockSpecFromStronglyTypedTiptapNode } from "@blocknote/core";
+import { createBlockSpecFromStronglyTypedTiptapNode } from "blocknote-core-ts";
 
 export const ColumnBlock = createBlockSpecFromStronglyTypedTiptapNode(Column, {
   width: {

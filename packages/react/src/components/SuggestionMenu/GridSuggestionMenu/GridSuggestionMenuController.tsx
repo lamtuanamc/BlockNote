@@ -3,7 +3,7 @@ import {
   InlineContentSchema,
   StyleSchema,
   SuggestionMenuState,
-} from "@blocknote/core";
+} from "blocknote-core-ts";
 import { flip, offset, size } from "@floating-ui/react";
 import { FC, useCallback, useMemo } from "react";
 

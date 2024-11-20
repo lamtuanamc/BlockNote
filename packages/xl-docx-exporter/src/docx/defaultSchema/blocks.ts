@@ -4,7 +4,7 @@ import {
   DefaultBlockSchema,
   DefaultProps,
   UnreachableCaseError,
-} from "@blocknote/core";
+} from "blocknote-core-ts";
 import {
   CheckBox,
   Table as DocxTable,

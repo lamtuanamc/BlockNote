@@ -3,7 +3,7 @@ import {
   InlineContentSchema,
   StyleSchema,
   TableContent,
-} from "@blocknote/core";
+} from "blocknote-core-ts";
 import { StyleSheet, View } from "@react-pdf/renderer";
 const PIXELS_PER_POINT = 0.75;
 

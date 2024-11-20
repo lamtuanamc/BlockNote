@@ -1,10 +1,10 @@
-import "@blocknote/core/fonts/inter.css";
+import "blocknote-core-ts/fonts/inter.css";
 import {
   GridSuggestionMenuController,
   useCreateBlockNote,
-} from "@blocknote/react";
-import { BlockNoteView } from "@blocknote/mantine";
-import "@blocknote/mantine/style.css";
+} from "blocknote-react-ts";
+import { BlockNoteView } from "blocknote-mantine-ts";
+import "blocknote-mantine-ts/style.css";
 
 export default function App() {
   // Creates a new editor instance.

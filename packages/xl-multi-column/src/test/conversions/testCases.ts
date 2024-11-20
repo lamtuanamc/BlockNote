@@ -1,4 +1,4 @@
-import { BlockNoteEditor, EditorTestCases } from "@blocknote/core";
+import { BlockNoteEditor, EditorTestCases } from "blocknote-core-ts";
 
 import { testEditorSchema } from "../setupTestEnv.js";
 
