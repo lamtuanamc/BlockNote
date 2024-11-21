@@ -10,9 +10,9 @@
   },
   "dependencies": {
     "@blocknote/ariakit": "^0.19.1",
-    "blocknote-core-ts": "^0.19.13",
-    "blocknote-mantine-ts": "^0.19.13",
-    "blocknote-react-ts": "^0.19.13",
+    "blocknote-core-ts": "latest",
+    "blocknote-mantine-ts": "latest",
+    "blocknote-react-ts": "latest",
     "@blocknote/shadcn": "^0.19.1",
     "@blocknote/xl-multi-column": "^0.19.1",
     "@headlessui/react": "^1.7.18",

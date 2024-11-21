@@ -124,6 +124,14 @@ NESTED BLOCKS
   --level: 1.3em;
 }
 
+[data-level="4"] {
+  --level: 1.1em;
+}
+
+[data-level="5"] {
+  --level: 1em;
+}
+
 [data-prev-level="1"] {
   --prev-level: 3em;
 }

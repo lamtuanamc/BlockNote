@@ -51,8 +51,8 @@
   },
   "dependencies": {
     "@ariakit/react": "^0.4.3",
-    "blocknote-core-ts": "^0.19.13",
-    "blocknote-react-ts": "^0.19.13"
+    "blocknote-core-ts": "latest",
+    "blocknote-react-ts": "latest"
   },
   "devDependencies": {
     "@types/react": "^18.0.25",

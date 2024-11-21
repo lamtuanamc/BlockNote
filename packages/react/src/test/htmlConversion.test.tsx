@@ -23,7 +23,7 @@ import {
 import { customReactInlineContentTestCases } from "./testCases/customReactInlineContent.js";
 import { customReactStylesTestCases } from "./testCases/customReactStyles.js";
 
-// TODO: code same from blocknote-core-tsts, maybe create separate test util package
+// TODO: code same from blocknote-core-ts, maybe create separate test util package
 async function convertToHTMLAndCompareSnapshots<
   B extends BlockSchema,
   I extends InlineContentSchema,

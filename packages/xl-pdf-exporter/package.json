@@ -49,8 +49,8 @@
     "email": "email dev"
   },
   "dependencies": {
-    "blocknote-core-ts": "^0.19.13",
-    "blocknote-react-ts": "^0.19.13",
+    "blocknote-core-ts": "latest",
+    "blocknote-react-ts": "latest",
     "@react-pdf/renderer": "^4.0.0",
     "buffer": "^6.0.3",
     "docx": "^9.0.2"

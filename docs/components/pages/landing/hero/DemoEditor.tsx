@@ -5,7 +5,7 @@ import {
   locales,
   uploadToTmpFilesDotOrg_DEV_ONLY,
 } from "blocknote-core-ts";
-import "blocknote-core-tsts/fonts/inter.css";
+import "blocknote-core-ts/fonts/inter.css";
 import {
   getDefaultReactSlashMenuItems,
   SuggestionMenuController,

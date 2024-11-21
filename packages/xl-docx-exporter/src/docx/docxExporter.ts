@@ -21,7 +21,7 @@ import {
   TextRun,
 } from "docx";
 
-import { Exporter, ExporterOptions } from "blocknote-core-tsts";
+import { Exporter, ExporterOptions } from "blocknote-core-ts";
 import { corsProxyResolveFileUrl } from "@shared/api/corsProxy.js";
 import { loadFileBuffer } from "@shared/util/fileUtil.js";
 

@@ -50,7 +50,7 @@
     "email": "email dev"
   },
   "dependencies": {
-    "blocknote-core-ts": "^0.19.13",
+    "blocknote-core-ts": "latest",
     "buffer": "^6.0.3",
     "docx": "^9.0.2",
     "sharp": "^0.33.5"

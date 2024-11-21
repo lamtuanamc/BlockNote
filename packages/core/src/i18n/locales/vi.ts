@@ -24,13 +24,13 @@ export const vi: Dictionary = {
       title: "Heading 4",
       subtext: "Subsection and group heading",
       aliases: ["h4", "heading4", "subheading"],
-      group: "Headings",
+      group: "Tiêu đề",
     },
     heading_5: {
       title: "Heading 5",
       subtext: "Subsection and group heading",
       aliases: ["h5", "heading5", "subheading"],
-      group: "Headings",
+      group: "Tiêu đề",
     },
     numbered_list: {
       title: "Danh sách đánh số",

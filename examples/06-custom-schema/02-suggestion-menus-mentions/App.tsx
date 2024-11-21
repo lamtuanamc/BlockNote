@@ -3,7 +3,7 @@ import {
   defaultInlineContentSpecs,
   filterSuggestionItems,
 } from "blocknote-core-ts";
-import "blocknote-core-tsts/fonts/inter.css";
+import "blocknote-core-ts/fonts/inter.css";
 import { BlockNoteView } from "blocknote-mantine-ts";
 import "blocknote-mantine-ts/style.css";
 import {

@@ -45,8 +45,8 @@
     "clean": "rimraf dist && rimraf types"
   },
   "dependencies": {
-    "blocknote-core-ts": "^0.19.13",
-    "blocknote-react-ts": "^0.19.13",
+    "blocknote-core-ts": "latest",
+    "blocknote-react-ts": "latest",
     "@tiptap/core": "^2.7.1",
     "prosemirror-model": "^1.23.0",
     "prosemirror-state": "^1.4.3",

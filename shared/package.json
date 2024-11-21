@@ -13,7 +13,7 @@
     "clean": "tsc --build --clean"
   },
   "dependencies": {
-    "blocknote-core-ts": "^0.19.13"
+    "blocknote-core-ts": "latest"
   },
   "devDependencies": {
     "typescript": "^5.3.3"

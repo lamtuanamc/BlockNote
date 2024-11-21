@@ -24,6 +24,8 @@ export const BLOCK_GROUP_SELECTOR = `[data-node-type="blockGroup"]`;
 export const H_ONE_BLOCK_SELECTOR = `[data-content-type=heading][data-level="1"]`;
 export const H_TWO_BLOCK_SELECTOR = `[data-content-type=heading][data-level="2"]`;
 export const H_THREE_BLOCK_SELECTOR = `[data-content-type=heading][data-level="3"]`;
+export const H_FOUR_BLOCK_SELECTOR = `[data-content-type=heading][data-level="4"]`;
+export const H_FIVE_BLOCK_SELECTOR = `[data-content-type=heading][data-level="5"]`;
 export const NUMBERED_LIST_SELECTOR = `[data-content-type="numberedListItem"]`;
 export const BULLET_LIST_SELECTOR = `[data-content-type="bulletListItem"]`;
 export const PARAGRAPH_SELECTOR = `[data-content-type="paragraph"]`;

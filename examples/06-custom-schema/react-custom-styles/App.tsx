@@ -1,5 +1,5 @@
 import { BlockNoteSchema, defaultStyleSpecs } from "blocknote-core-ts";
-import "blocknote-core-tsts/fonts/inter.css";
+import "blocknote-core-ts/fonts/inter.css";
 import {
   createReactStyleSpec,
   FormattingToolbar,
