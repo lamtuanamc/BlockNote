@@ -19,13 +19,13 @@ export const es = {
       group: "Encabezados",
     },
     heading_4: {
-      title: "Heading 4",
+      title: "Encabezado 4",
       subtext: "Subsection and group heading",
       aliases: ["h4", "heading4", "subheading"],
       group: "Encabezados",
     },
     heading_5: {
-      title: "Heading 5",
+      title: "Encabezado 5",
       subtext: "Subsection and group heading",
       aliases: ["h5", "heading5", "subheading"],
       group: "Encabezados",

@@ -21,13 +21,13 @@ export const pt: Dictionary = {
       group: "Títulos",
     },
     heading_4: {
-      title: "Heading 4",
+      title: "Título 4",
       subtext: "Subsection and group heading",
       aliases: ["h4", "heading4", "subheading"],
       group: "Títulos",
     },
     heading_5: {
-      title: "Heading 5",
+      title: "Título 5",
       subtext: "Subsection and group heading",
       aliases: ["h5", "heading5", "subheading"],
       group: "Títulos",
