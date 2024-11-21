@@ -255,7 +255,7 @@ export function blockToNode(
 
   const nodeTypeCorrespondingToBlock = schema.nodes[block.type];
 
-  if (nodeTypeCorrespondingToBlock.isInGroup("blockContent")) {
+  if (nodeTypeCorrespondingToBlock?.isInGroup("blockContent")) {
     // Blocks with a type that matches "blockContent" group always need to be wrapped in a blockContainer
 
     const contentNode = blockOrInlineContentToContentNode(
@@ -276,7 +276,7 @@ export function blockToNode(
       },
       groupNode ? [contentNode, groupNode] : contentNode
     );
-  } else if (nodeTypeCorrespondingToBlock.isInGroup("bnBlock")) {
+  } else if (nodeTypeCorrespondingToBlock?.isInGroup("bnBlock")) {
     // this is a bnBlock node like Column or ColumnList that directly translates to a prosemirror node
     return schema.nodes[block.type].createChecked(
       {

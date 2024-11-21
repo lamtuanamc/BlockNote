@@ -55,7 +55,7 @@ export function removeAndInsertBlocks<
 
     // Keeps traversing nodes if block with target ID has not been found.
     if (
-      !node.type.isInGroup("bnBlock") ||
+      !node.type?.isInGroup("bnBlock") ||
       !idsOfBlocksToRemove.has(node.attrs.id)
     ) {
       return true;

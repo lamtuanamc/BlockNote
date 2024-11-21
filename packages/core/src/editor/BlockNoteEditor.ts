@@ -1190,6 +1190,7 @@ export class BlockNoteEditor<
       ignoreQueryLength?: boolean;
     }
   ) {
+    
     const tr = this.prosemirrorView.state.tr;
     const transaction =
       pluginState && pluginState.deleteTriggerCharacter

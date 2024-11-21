@@ -60,7 +60,7 @@ export function getNearestBlockPos(doc: Node, pos: number) {
 
   // Checks if the position provided is already just before a block node, in
   // which case we return the position.
-  if ($pos.nodeAfter && $pos.nodeAfter.type.isInGroup("bnBlock")) {
+  if ($pos.nodeAfter && $pos.nodeAfter.type?.isInGroup("bnBlock")) {
     return {
       posBeforeNode: $pos.pos,
       node: $pos.nodeAfter,
@@ -72,7 +72,7 @@ export function getNearestBlockPos(doc: Node, pos: number) {
   let depth = $pos.depth;
   let node = $pos.node(depth);
   while (depth > 0) {
-    if (node.type.isInGroup("bnBlock")) {
+    if (node.type?.isInGroup("bnBlock")) {
       return {
         posBeforeNode: $pos.before(depth),
         node: node,
@@ -91,7 +91,7 @@ export function getNearestBlockPos(doc: Node, pos: number) {
   // is a problem specifically when using the collaboration plugin.
   const allBlockContainerPositions: number[] = [];
   doc.descendants((node, pos) => {
-    if (node.type.isInGroup("bnBlock")) {
+    if (node.type?.isInGroup("bnBlock")) {
       allBlockContainerPositions.push(pos);
     }
   });
@@ -124,7 +124,7 @@ export function getBlockInfoWithManualOffset(
   node: Node,
   bnBlockBeforePosOffset: number
 ): BlockInfo {
-  if (!node.type.isInGroup("bnBlock")) {
+  if (!node.type?.isInGroup("bnBlock")) {
     throw new Error(
       `Attempted to get bnBlock node at position but found node of different type ${node.type}`
     );
@@ -183,7 +183,7 @@ export function getBlockInfoWithManualOffset(
       blockNoteType: blockContent.node.type.name,
     };
   } else {
-    if (!bnBlock.node.type.isInGroup("childContainer")) {
+    if (!bnBlock.node.type?.isInGroup("childContainer")) {
       throw new Error(
         `bnBlock node is not in the childContainer group: ${bnBlock.node}`
       );

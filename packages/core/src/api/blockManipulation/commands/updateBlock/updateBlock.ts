@@ -50,11 +50,14 @@ export const updateBlockCommand =
       const oldNodeType = state.schema.nodes[blockInfo.blockNoteType];
       const newNodeType =
         state.schema.nodes[block.type || blockInfo.blockNoteType];
-      const newBnBlockNodeType = newNodeType.isInGroup("bnBlock")
+      const newBnBlockNodeType = newNodeType?.isInGroup("bnBlock")
         ? newNodeType
         : state.schema.nodes["blockContainer"];
 
-      if (blockInfo.isBlockContainer && newNodeType.isInGroup("blockContent")) {
+      if (
+        blockInfo.isBlockContainer &&
+        newNodeType?.isInGroup("blockContent")
+      ) {
         updateChildren(block, state, editor, blockInfo);
         // The code below determines the new content of the block.
         // or "keep" to keep as-is
@@ -68,7 +71,7 @@ export const updateBlockCommand =
         );
       } else if (
         !blockInfo.isBlockContainer &&
-        newNodeType.isInGroup("bnBlock")
+        newNodeType?.isInGroup("bnBlock")
       ) {
         updateChildren(block, state, editor, blockInfo);
         // old node was a bnBlock type (like column or columnList) and new block as well

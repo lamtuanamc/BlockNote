@@ -107,7 +107,7 @@ function serializeBlock<
 
   const pmType = editor.pmSchema.nodes[block.type as any];
 
-  if (pmType.isInGroup("bnBlock")) {
+  if (pmType?.isInGroup("bnBlock")) {
     if (block.children && block.children.length > 0) {
       const fragment = serializeBlocks(
         editor,

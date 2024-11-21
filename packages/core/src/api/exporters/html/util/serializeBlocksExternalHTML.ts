@@ -205,7 +205,7 @@ function serializeBlock<
       }
     }
 
-    if (editor.pmSchema.nodes[block.type as any].isInGroup("blockContent")) {
+    if (editor.pmSchema.nodes[block.type as any]?.isInGroup("blockContent")) {
       // default "blockContainer" style blocks are flattened (no "nested block" support) for externalHTML, so append the child fragment to the outer fragment
       fragment.append(childFragment);
     } else {

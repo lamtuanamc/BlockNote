@@ -60,7 +60,7 @@ export function fragmentToBlocks<
       return false;
     }
 
-    if (node.type.isInGroup("bnBlock")) {
+    if (node.type?.isInGroup("bnBlock")) {
       blocks.push(
         nodeToBlock(
           node,

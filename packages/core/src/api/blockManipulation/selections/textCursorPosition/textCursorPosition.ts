@@ -37,7 +37,7 @@ export function getTextCursorPosition<
   if (resolvedPos.depth > 1) {
     // for nodes nested in bnBlocks
     parentNode = resolvedPos.node();
-    if (!parentNode.type.isInGroup("bnBlock")) {
+    if (!parentNode.type?.isInGroup("bnBlock")) {
       // for blockGroups, we need to go one level up
       parentNode = resolvedPos.node(resolvedPos.depth - 1);
     }
