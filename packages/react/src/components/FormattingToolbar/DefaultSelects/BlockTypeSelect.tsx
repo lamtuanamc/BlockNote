@@ -78,7 +78,7 @@ export const blockTypeSelectItems = (
       block.props.level === 3,
   },
   {
-    name: "Heading 4",
+    name: dict.slash_menu.heading_4.title,
     type: "heading",
     props: { level: 4 },
     icon: RiH4,
@@ -88,7 +88,7 @@ export const blockTypeSelectItems = (
       block.props.level === 4,
   },
   {
-    name: "Heading 5",
+    name: dict.slash_menu.heading_5.title,
     type: "heading",
     props: { level: 5 },
     icon: RiH5,

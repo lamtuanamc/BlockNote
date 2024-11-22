@@ -12,6 +12,8 @@ import {
   RiH1,
   RiH2,
   RiH3,
+  RiH4,
+  RiH5,
   RiImage2Fill,
   RiListCheck3,
   RiListOrdered,
@@ -20,8 +22,6 @@ import {
   RiText,
   RiVolumeUpFill,
   RiCodeBlock,
-  RiH4,
-  RiH5,
 } from "react-icons/ri";
 import { DefaultReactSuggestionItem } from "./types.js";
 
