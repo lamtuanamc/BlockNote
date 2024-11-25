@@ -141,6 +141,13 @@ NESTED BLOCKS
 [data-prev-level="3"] {
   --prev-level: 1.3em;
 }
+[data-prev-level="4"] {
+  --prev-level: 1.1em;
+}
+
+[data-prev-level="5"] {
+  --prev-level: 1em;
+}
 
 .bn-block-outer[data-prev-type="heading"] > .bn-block > .bn-block-content {
   font-size: var(--prev-level);

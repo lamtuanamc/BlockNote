@@ -124,21 +124,21 @@ const mergeBlocks = (
     }
 
     // TODO: test merging between a columnList and paragraph, between two columnLists, and v.v.
+    let startPos = prevBlockInfo.blockContent.afterPos - 1;
+    let endPos = nextBlockInfo.blockContent.beforePos + 1;
+
+    // Check if the previous block is an image
     if (prevBlockInfo.blockNoteType === "image") {
-      dispatch(
-        state.tr.delete(
-          prevBlockInfo.blockContent.afterPos,
-          nextBlockInfo.blockContent.beforePos + 1
-        )
-      );
-    } else {
-      dispatch(
-        state.tr.delete(
-          prevBlockInfo.blockContent.afterPos - 1,
-          nextBlockInfo.blockContent.beforePos + 1
-        )
-      );
+      // If the next block contains text, merging will remove the image (previous block) and retain the text
+      if (nextBlockInfo.blockContent.node.textContent) {
+        endPos = nextBlockInfo.blockContent.beforePos;
+      } else {
+        // If the next block has no text, merging will remove the text block and retain the image
+        startPos = prevBlockInfo.blockContent.afterPos;
+      }
     }
+
+    dispatch(state.tr.delete(startPos, endPos));
   }
 
   return true;
