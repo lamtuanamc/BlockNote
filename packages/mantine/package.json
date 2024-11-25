@@ -6,7 +6,7 @@
     "*.css"
   ],
   "license": "MPL-2.0",
-  "version": "0.19.22",
+  "version": "0.19.24",
   "files": [
     "dist",
     "types",
