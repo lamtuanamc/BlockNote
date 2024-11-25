@@ -111,19 +111,19 @@ export function SuggestionMenuController<
     {
       placement: "bottom-start",
       middleware: [
-        offset(10),
+        offset(20),
         // Flips the menu placement to maximize the space available, and prevents
         // the menu from being cut off by the confines of the screen.
         flip({
           mainAxis: true,
           crossAxis: true,
-          fallbackPlacements: ["top-start", "bottom-start"],
+          fallbackPlacements: ["top-start"],
         }),
         shift(),
         size({
           apply({ availableHeight, elements }) {
             Object.assign(elements.floating.style, {
-              maxHeight: `${availableHeight - 10}px`,
+              maxHeight: `${availableHeight - 20}px`,
             });
           },
         }),

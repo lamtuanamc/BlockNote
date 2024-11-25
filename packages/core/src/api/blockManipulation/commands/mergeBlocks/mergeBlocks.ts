@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { Node } from "prosemirror-model";
 import { EditorState } from "prosemirror-state";
 
@@ -123,12 +124,21 @@ const mergeBlocks = (
     }
 
     // TODO: test merging between a columnList and paragraph, between two columnLists, and v.v.
-    dispatch(
-      state.tr.delete(
-        prevBlockInfo.blockContent.afterPos - 1,
-        nextBlockInfo.blockContent.beforePos + 1
-      )
-    );
+    if (prevBlockInfo.blockNoteType === "image") {
+      dispatch(
+        state.tr.delete(
+          prevBlockInfo.blockContent.afterPos,
+          nextBlockInfo.blockContent.beforePos + 1
+        )
+      );
+    } else {
+      dispatch(
+        state.tr.delete(
+          prevBlockInfo.blockContent.afterPos - 1,
+          nextBlockInfo.blockContent.beforePos + 1
+        )
+      );
+    }
   }
 
   return true;
@@ -160,7 +170,9 @@ export const mergeBlocksCommand =
       prevBlockInfo
     );
 
-    if (!canMerge(bottomNestedBlockInfo, nextBlockInfo)) {
+    const prevBlockIsImage = prevBlockInfo.blockNoteType === "image";
+
+    if (!canMerge(bottomNestedBlockInfo, nextBlockInfo) && !prevBlockIsImage) {
       return false;
     }
 

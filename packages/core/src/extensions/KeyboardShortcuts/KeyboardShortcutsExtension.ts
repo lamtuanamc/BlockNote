@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { Extension } from "@tiptap/core";
 
 import { TextSelection } from "prosemirror-state";
@@ -297,7 +298,9 @@ export const KeyboardShortcutsExtension = Extension.create<{
                   "inline*" &&
                   bottomBlock.blockContent.node.childCount === 0);
 
-              if (prevBlockNotTableAndNoContent) {
+              const isImageBlock = bottomBlock.blockNoteType === "image";
+
+              if (prevBlockNotTableAndNoContent && !isImageBlock) {
                 return chain()
                   .cut(
                     {
