@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { Mark, Node, Schema } from "@tiptap/pm/model";
 
 import UniqueID from "../../extensions/UniqueID/UniqueID.js";
@@ -103,7 +104,7 @@ function styledTextArrayToNodes<S extends StyleSchema>(
   if (typeof content === "string") {
     nodes.push(
       ...styledTextToNodes(
-        { type: "text", text: content, styles: {} },
+        { type: "text", text: content, styles: {}, rowspan: 1, colspan: 1 },
         schema,
         styleSchema
       )
@@ -163,7 +164,10 @@ export function tableContentToNodes<
     const columnNodes: Node[] = [];
     for (let i = 0; i < row.cells.length; i++) {
       const cell = row.cells[i];
+
       let pNode: Node;
+      let colspan = 1;
+      let rowspan = 1;
       if (!cell) {
         pNode = schema.nodes["tableParagraph"].createChecked({});
       } else if (typeof cell === "string") {
@@ -172,6 +176,10 @@ export function tableContentToNodes<
           schema.text(cell)
         );
       } else {
+        if (Array.isArray(cell) && cell.length > 0) {
+          colspan = (cell as any)[0]["colspan"] ?? 1;
+          rowspan = (cell as any)[0]["rowspan"] ?? 1;
+        }
         const textNodes = inlineContentToNodes(cell, schema, styleSchema);
         pNode = schema.nodes["tableParagraph"].createChecked({}, textNodes);
       }
@@ -184,14 +192,19 @@ export function tableContentToNodes<
           colwidth: tableContent.columnWidths?.[i]
             ? [tableContent.columnWidths[i]]
             : null,
+          colspan: colspan,
+          rowspan: rowspan,
         },
         pNode
       );
+
       columnNodes.push(cellNode);
     }
+
     const rowNode = schema.nodes["tableRow"].createChecked({}, columnNodes);
     rowNodes.push(rowNode);
   }
+
   return rowNodes;
 }
 

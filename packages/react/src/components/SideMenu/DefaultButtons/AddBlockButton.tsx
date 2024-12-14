@@ -29,15 +29,12 @@ export const AddBlockButton = <
 
   const onClick = useCallback(() => {
     const blockContent = props?.block?.content;
-    console.log("blockContent::::::::::::::::::::", blockContent);
     const isBlockEmpty =
       blockContent !== undefined &&
       Array.isArray(blockContent) &&
       blockContent.length === 0;
-    console.log("isBlockEmpty::::::::::::::::::::", isBlockEmpty);
 
     if (isBlockEmpty) {
-      console.log("props.block::::::::::::::::::::", props.block);
       editor.setTextCursorPosition(props.block);
       editor.openSuggestionMenu("/");
     } else {
@@ -46,7 +43,6 @@ export const AddBlockButton = <
         props.block,
         "after"
       )[0];
-      console.log("insertedBlock::::::::::::::::::::", insertedBlock);
       editor.setTextCursorPosition(insertedBlock);
       editor.openSuggestionMenu("/");
     }

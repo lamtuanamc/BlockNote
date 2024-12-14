@@ -81,6 +81,8 @@ export type PartialCustomInlineContentFromConfig<
     : I["content"] extends "none"
     ? undefined
     : never;
+  colspan?: number; // Mặc định là 1
+  rowspan?: number; // Mặc định là 1
 };
 
 export type PartialInlineContentFromConfig<
@@ -98,6 +100,8 @@ export type StyledText<T extends StyleSchema> = {
   type: "text";
   text: string;
   styles: Styles<T>;
+  colspan?: number; // Mặc định là 1
+  rowspan?: number; // Mặc định là 1
 };
 
 export type Link<T extends StyleSchema> = {

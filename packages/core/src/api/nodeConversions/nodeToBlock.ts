@@ -44,6 +44,7 @@ export function contentNodeToTableContent<
         // The colwidth array should have multiple values when the colspan of a
         // cell is greater than 1. However, this is not yet implemented so we
         // can always assume a length of 1.
+        ///
         ret.columnWidths.push(cellNode.attrs.colwidth?.[0] || undefined);
       });
     }
@@ -53,7 +54,8 @@ export function contentNodeToTableContent<
         contentNodeToInlineContent(
           cellNode.firstChild!,
           inlineContentSchema,
-          styleSchema
+          styleSchema,
+          cellNode.attrs
         )
       );
     });
@@ -70,7 +72,7 @@ export function contentNodeToTableContent<
 export function contentNodeToInlineContent<
   I extends InlineContentSchema,
   S extends StyleSchema
->(contentNode: Node, inlineContentSchema: I, styleSchema: S) {
+>(contentNode: Node, inlineContentSchema: I, styleSchema: S, attrs?: any) {
   const content: InlineContent<any, S>[] = [];
   let currentContent: InlineContent<any, S> | undefined = undefined;
 
@@ -174,6 +176,8 @@ export function contentNodeToInlineContent<
                 type: "text",
                 text: node.textContent,
                 styles,
+                colspan: attrs?.colspan ?? 1,
+                rowspan: attrs?.rowspan ?? 1,
               },
             ],
           };
@@ -211,6 +215,8 @@ export function contentNodeToInlineContent<
                   type: "text",
                   text: node.textContent,
                   styles,
+                  colspan: attrs?.colspan ?? 1,
+                  rowspan: attrs?.rowspan ?? 1,
                 },
               ],
             };
@@ -222,6 +228,8 @@ export function contentNodeToInlineContent<
             type: "text",
             text: node.textContent,
             styles,
+            colspan: attrs?.colspan ?? 1,
+            rowspan: attrs?.rowspan ?? 1,
           };
         }
       } else {
@@ -231,11 +239,14 @@ export function contentNodeToInlineContent<
     // Current content does not exist.
     else {
       // Node is text.
+
       if (!linkMark) {
         currentContent = {
           type: "text",
           text: node.textContent,
           styles,
+          colspan: attrs?.colspan ?? 1,
+          rowspan: attrs?.rowspan ?? 1,
         };
       }
       // Node is a link.
@@ -248,6 +259,8 @@ export function contentNodeToInlineContent<
               type: "text",
               text: node.textContent,
               styles,
+              colspan: attrs?.colspan ?? 1,
+              rowspan: attrs?.rowspan ?? 1,
             },
           ],
         };
@@ -384,7 +397,8 @@ export function nodeToBlock<
     content = contentNodeToInlineContent(
       blockInfo.blockContent.node,
       inlineContentSchema,
-      styleSchema
+      styleSchema,
+      {}
     );
   } else if (blockConfig.content === "table") {
     if (!blockInfo.isBlockContainer) {
